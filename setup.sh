@@ -7,7 +7,7 @@ if [ ! -f docker/.env ]; then
 fi
 
 # Load environment variables
-envsubst < docker/database/setup/schema.sql.template > docker/database/setup/schema.sql
+env $(grep -v '^#' docker/.env | xargs) envsubst < docker/database/setup/schema.sql.template > docker/database/setup/schema.sql
 
 # Build and start services
 cd docker
