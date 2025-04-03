@@ -3,7 +3,7 @@ services:
     build:
       context: ./database
     volumes:
-      - oracle-data:/opt/oracle/oradata
+      - db-data:/opt/oracle/oradata
     ports:
       - "${DB_PORT:-1521}:1521"
     environment:
