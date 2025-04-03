@@ -1,0 +1,21 @@
+services:
+  database:
+    build:
+      context: ./database
+    volumes:
+      - oracle-data:/opt/oracle/oradata
+    ports:
+      - "${DB_PORT:-1521}:1521"
+    environment:
+      - ORACLE_PDB=${ORACLE_PDB:-MEDPDB}
+      - ORACLE_PWD=${ORACLE_PWD:-12345}
+    networks:
+      - medical-network
+
+networks:
+  medical-network:
+    driver: bridge
+
+volumes:
+  db-data:
+    driver: local
