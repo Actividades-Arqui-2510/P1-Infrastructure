@@ -35,9 +35,10 @@ CREATE TABLE appointments (
     doctor_id NUMBER NOT NULL,
     patient_id NUMBER NOT NULL,
     appointment_date DATE NOT NULL,
-    appointment_time VARCHAR2(10),
     status VARCHAR2(20) DEFAULT 'Programada',
     notes VARCHAR2(4000),
+    start_time TIMESTAMP NOT NULL,
+    end_time TIMESTAMP NOT NULL,
     CONSTRAINT fk_doctor
       FOREIGN KEY (doctor_id)
       REFERENCES doctors(doctor_id),
