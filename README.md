@@ -75,7 +75,8 @@ After successful deployment, you can access:
 * **Application User**: `medadmin/12345@//localhost:1521/MEDPDB`
 
 ### Backend Services
-* **SOAP Web Services**: `http://localhost:8080/soap/users?wsdl`
+* **SOAP Web User Service**: `http://localhost:8080/soap/users?wsdl`
+* **SOAP Web Appointment Service**: `http://localhost:8080/soap/appointments?wsdl`
 * **GlassFish Admin Console**: `http://localhost:4848` (admin/admin)
 
 ## Database Schema
