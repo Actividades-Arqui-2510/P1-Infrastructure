@@ -9,6 +9,10 @@ This repository contains the infrastructure setup for deploying a medical appoin
 * Jakarta EE backend with SOAP web services (GlassFish)
 * Service health monitoring
 * Container orchestration
+  
+## Related Repositories
+
+- **Backend**: [P1-Backend](https://github.com/Actividades-Arqui-2510/P1-Backend) - Contains the Jakarta EE application with SOAP web services
 
 ## Prerequisites
 
