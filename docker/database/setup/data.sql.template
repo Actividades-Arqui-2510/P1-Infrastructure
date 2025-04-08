@@ -1,3 +1,9 @@
+-- Connect to PDB
+ALTER SESSION SET CONTAINER = ${ORACLE_PDB};
+
+-- Connect as application user
+CONNECT ${DB_USER}/${DB_PASSWORD}@//localhost:1521/${ORACLE_PDB}
+
 -- Doctors
 INSERT INTO doctors (first_name, last_name, specialty, email, phone, password) 
 VALUES ('Juan', 'Pérez', 'Cardiología', 'juan.perez@example.com', '555-0100', '12345');
