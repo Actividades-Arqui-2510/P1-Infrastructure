@@ -7,11 +7,11 @@ if [ ! -f docker/.env ]; then
 fi
 
 # Load environment variables
-source docker/.env
+export $(grep -v '^#' docker/.env | xargs)
 
 # Process templates
 envsubst < docker/database/setup/schema.sql.template > docker/database/setup/01_schema.sql
-envsubst < docker/database/setup/02_data.sql.template > docker/database/setup/02_data.sql
+envsubst < docker/database/setup/data.sql.template > docker/database/setup/02_data.sql
 
 # Build and start services
 cd docker

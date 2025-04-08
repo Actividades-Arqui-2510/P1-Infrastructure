@@ -9,10 +9,13 @@ services:
     environment:
       - ORACLE_PDB=${ORACLE_PDB:-MEDPDB}
       - ORACLE_PWD=${ORACLE_PWD:-12345}
+      - DB_USER=${DB_USER:-medadmin}
+      - DB_PASSWORD=${DB_PASSWORD:-12345}
+      - DB_PORT=${DB_PORT:-1521}
     networks:
       - medical-network
     healthcheck:
-      test: ["CMD", "sqlplus", "-s", "system/${ORACLE_PWD}@//localhost:1521/${ORACLE_PDB}", "<<< 'SELECT 1 FROM DUAL;'"]
+      test: ["CMD", "/database/healthcheck.sh"]
       interval: 30s
       timeout: 10s
       retries: 5
