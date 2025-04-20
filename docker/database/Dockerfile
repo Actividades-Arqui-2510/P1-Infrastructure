@@ -1,4 +1,4 @@
-FROM container-registry.oracle.com/database/free:latest-lite
+FROM container-registry.oracle.com/database/free:23.7.0.0-lite
 
 # Copy initialization scripts
 COPY setup/ /opt/oracle/scripts/startup
