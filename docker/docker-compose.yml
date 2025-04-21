@@ -54,6 +54,20 @@ services:
       retries: 3
       start_period: 120s
 
+  frontend:
+    build:
+      context: https://github.com/Actividades-Arqui-2510/P1-Front.git
+      args:
+        - VITE_DOCKER_ENV=true
+        - VITE_API_URL=http://localhost:8080/soap
+    ports:
+      - "3000:5173"
+    depends_on:
+      backend:
+        condition: service_healthy
+    networks:
+      - medical-network
+
 networks:
   medical-network:
     driver: bridge

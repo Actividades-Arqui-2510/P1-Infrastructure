@@ -7,12 +7,14 @@ A containerized medical appointment system with Oracle database backend and Jaka
 This repository contains the infrastructure setup for deploying a medical appointment system with:
 * Oracle Database
 * Jakarta EE backend with SOAP web services (GlassFish)
+* Svelte Frontend
 * Service health monitoring
 * Container orchestration
   
 ## Related Repositories
 
 - **Backend**: [P1-Backend](https://github.com/Actividades-Arqui-2510/P1-Backend) - Contains the Jakarta EE application with SOAP web services
+- **Frontend**: [P1-Front](https://github.com/Actividades-Arqui-2510/P1-Front) - Sveltekit frontend for users and appointments management.
 
 ## Prerequisites
 
