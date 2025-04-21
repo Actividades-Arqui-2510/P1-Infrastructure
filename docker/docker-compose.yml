@@ -24,7 +24,7 @@ services:
 
   backend:
     build:
-      context: https://github.com/Actividades-Arqui-2510/P1-Backend.git
+      context: https://github.com/Actividades-Arqui-2510/P1-Backend.git#v1.0.0
       args:
         - ORACLE_PDB=${ORACLE_PDB:-MEDPDB}
         - ORACLE_PWD=${ORACLE_PWD:-12345}
@@ -56,7 +56,7 @@ services:
 
   frontend:
     build:
-      context: https://github.com/Actividades-Arqui-2510/P1-Front.git
+      context: https://github.com/Actividades-Arqui-2510/P1-Front.git#v1.0.0
       args:
         - VITE_DOCKER_ENV=true
         - VITE_API_URL=http://localhost:8080/soap
